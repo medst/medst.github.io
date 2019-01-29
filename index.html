@@ -131,41 +131,41 @@
                         </thead>
                         <tbody>
             <script>
-                var locations=new Array(dias3.features.length)
-                for (i=0; i <dias3.features.length; i++)
+                var locations=new Array(dias30.features.length)
+                for (i=0; i <dias30.features.length; i++)
                     locations[i]=new Array(7);
                 var j = 0;
-                for(var i = 0; i < dias3.features.length; i++){
+                for(var i = 0; i < dias30.features.length; i++){
                     var values = [];
                     var status = 1;
                     var tr = "";
-                    values[6] = dias3.features[i].properties.typeplot;
-                    values[5] = '<td>' + dias3.features[i].properties.mag + " " + dias3.features[i].properties.magtype + '</td>';
-                    values[1] = dias3.features[i].geometry.coordinates[0] + ',' + dias3.features[i].geometry.coordinates[1];  
+                    values[6] = dias30.features[i].properties.typeplot;
+                    values[5] = '<td>' + dias30.features[i].properties.mag + " " + dias30.features[i].properties.magtype + '</td>';
+                    values[1] = dias30.features[i].geometry.coordinates[0] + ',' + dias30.features[i].geometry.coordinates[1];  
                     if(dias3.features[i].properties.loc.indexOf('ALBORÁN') > -1){
-			values[2] = '<td> '+dias3.features[i].properties.loc+' </td>';
+			values[2] = '<td> '+dias30.features[i].properties.loc+' </td>';
 			    console.log('zid');
 		    }
-                    else if(dias3.features[i].properties.loc.indexOf('.MAC') > -1 || dias3.features[i].properties.loc.indexOf('_MAC') > -1)
-                        values[2] = '<td> '+dias3.features[i].properties.loc.replace('MAC','')+' </td>';
+                    else if(dias3.features[i].properties.loc.indexOf('.MAC') > -1 || dias30.features[i].properties.loc.indexOf('_MAC') > -1)
+                        values[2] = '<td> '+dias30.features[i].properties.loc.replace('MAC','')+' </td>';
                     else
                         status = 0;
-                    values[3] = '<td>'+dias3.features[i].properties.fecha+'</td>';
+                    values[3] = '<td>'+dias30.features[i].properties.fecha+'</td>';
                     if(dias3.features[i].properties.intensidad.replace(/ /g,'').length != 0)
-                        values[4] = '<td>'+dias3.features[i].properties.intensidad+'</td>';
+                        values[4] = '<td>'+dias30.features[i].properties.intensidad+'</td>';
                     else
                         values[4] = '<td>-</td>';
                     if(dias3.features[i].properties.depth.length != 0)
-                        values[0] = '<td>'+dias3.features[i].properties.depth+'</td>';
+                        values[0] = '<td>'+dias30.features[i].properties.depth+'</td>';
                     else
                         values[0] = '<td>-</td>';
                     if(status == 1){
-                        locations[j][0] = dias3.features[i].geometry.coordinates[1];
-                        locations[j][1] = dias3.features[i].geometry.coordinates[0];
-                        locations[j][2] = dias3.features[i].properties.mag;
-                        locations[j][3] = dias3.features[i].properties.magtype;
+                        locations[j][0] = dias30.features[i].geometry.coordinates[1];
+                        locations[j][1] = dias30.features[i].geometry.coordinates[0];
+                        locations[j][2] = dias30.features[i].properties.mag;
+                        locations[j][3] = dias30.features[i].properties.magtype;
                         locations[j][4] = values[2];
-                        locations[j][5] = dias3.features[i].properties.fecha;
+                        locations[j][5] = dias30.features[i].properties.fecha;
                         locations[j][6] = values[6];
                         if(values[6] >= 3)
                             tr = '<tr onclick="zoom('+j+')" style="cursor:pointer" class="isa_error">';
