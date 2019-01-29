@@ -142,10 +142,10 @@
                     values[6] = dias3.features[i].properties.typeplot;
                     values[5] = '<td>' + dias3.features[i].properties.mag + " " + dias3.features[i].properties.magtype + '</td>';
                     values[1] = dias3.features[i].geometry.coordinates[0] + ',' + dias3.features[i].geometry.coordinates[1];  
-                    if(dias3.features[i].properties.loc.indexOf('ALBOR') > -1  && dias3.features[i].properties.loc.indexOf('SUR') > -1)
-                        values[2] = '<td> '+'البوران'+' </td>';
-                    else if(dias3.features[i].properties.loc.indexOf('ALHUCEMAS') > -1)
-                        values[2] = '<td> '+'الحسيمة'+' </td>';
+                    if(dias3.features[i].properties.loc.indexOf('ALBORÁN') > -1)
+                        values[2] = '<td> '+dias3.features[i].properties.loc+' </td>';
+                    else if(dias3.features[i].properties.loc.indexOf('.MAC') > -1 || dias3.features[i].properties.loc.indexOf('_MAC') > -1)
+                        values[2] = '<td> '+dias3.features[i].properties.loc.replace('MAC','')+' </td>';
                     else
                         status = 0;
                     values[3] = '<td>'+dias3.features[i].properties.fecha+'</td>';
