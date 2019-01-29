@@ -142,7 +142,7 @@
                     values[6] = dias30.features[i].properties.typeplot;
                     values[5] = '<td>' + dias30.features[i].properties.mag + " " + dias30.features[i].properties.magtype + '</td>';
                     values[1] = dias30.features[i].geometry.coordinates[0] + ',' + dias30.features[i].geometry.coordinates[1];  
-                    if(dias30.features[i].properties.loc.indexOf('ALBORÁN') > -1 || dias30.features[i].properties.loc.indexOf('.MAC') > -1 || dias30.features[i].properties.loc.indexOf('_MAC') > -1)
+                    if(dias30.features[i].properties.loc.indexOf('ALBOR') > -1 || dias30.features[i].properties.loc.indexOf('.MAC') > -1 || dias30.features[i].properties.loc.indexOf('_MAC') > -1)
                         values[2] = '<td> '+dias30.features[i].properties.loc.replace('MAC','').replace('.','').replace('_','')+' </td>';
                     else
                         status = 0;
