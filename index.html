@@ -129,10 +129,11 @@
                     values[1] = dias30.features[i].geometry.coordinates[0] + ',' + dias30.features[i].geometry.coordinates[1];  
 //                     if(dias30.features[i].properties.loc.indexOf('ALBOR') > -1)
 // 			values[2] = '<td> '+'ALBORAN'+dias30.features[i].properties.loc.substring(7, dias30.features[i].properties.loc.lenght)+'</td>';
-		    if(dias30.features[i].properties.loc.indexOf('ALBOR') > -1)
-		        values[2] = '<td> '+'ALBORAN'+dias30.features[i].properties.loc.substring(7, dias30.features[i].properties.loc.lenght)+'</td>';
-		    else
-		        values[2] = '<td> '+dias30.features[i].properties.loc.replace('MAC','').replace('.','').replace('_','')+'</td>';
+		    if(dias30.features[i].properties.loc.indexOf('ALBOR') > -1 || dias30.features[i].properties.loc.indexOf('.MAC') > -1 || dias30.features[i].properties.loc.indexOf('_MAC') > -1)
+                        if(dias30.features[i].properties.loc.indexOf('ALBOR') > -1)
+                            values[2] = '<td> '+'ALBORAN'+dias30.features[i].properties.loc.substring(7, dias30.features[i].properties.loc.lenght)+'</td>';
+                        else
+                            values[2] = '<td> '+dias30.features[i].properties.loc.replace('MAC','').replace('.','').replace('_','')+'</td>';
                     else
                         status = 0;
                     values[3] = '<td>'+dias30.features[i].properties.fecha+'</td>';
