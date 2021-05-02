@@ -44,7 +44,18 @@
             </div><!--/.nav-collapse -->
           </div>
         </nav>
-    
+    <style>
+            .rev {
+                transform: rotate(180deg);
+            }
+            .rev > li {
+                transform: rotate(-180deg);
+            }
+        </style>
+        <script>
+            var rev = document.getElementsByClassName('navbar-nav');
+            if(window.innerWidth < 768) rev[0].className += " rev";
+        </script>
     <div dir="rtl" class="container">
         <br>
         <div class="row isa_warning" style="">
