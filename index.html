@@ -195,8 +195,10 @@
                         optimized: false
                     });
                     markers[i] = marker;
-                    addInfoWindow(markers[i], contentString);
+//                     addInfoWindow(markers[i], contentString);
                 }
+		addInfoWindow(markers[0], '<h2 dir="rtl">'+locations[0][4]+'</h2><h4 dir="rtl">التاريخ : '+locations[0][5]+'</h4>'
+                                        +'<h3 align="center">'+locations[0][2]+'<small>'+locations[0][3]+'</small></h3>');
                 markers[0].setIcon('images/earthquake/pen_move.gif'); 
                 function getCircle(magnitude, color) {
                   var circle = {
@@ -225,6 +227,8 @@
                             markers[i].setIcon(getCircle(locations[i][2], 'red'));
                         markers[j].setIcon('images/earthquake/pen_move.gif'); 
                         map.setZoom(10);
+			addInfoWindow(markers[j], '<h2 dir="rtl">'+locations[j][4]+'</h2><h4 dir="rtl">التاريخ : '+locations[j][5]+'</h4>'
+                                        +'<h3 align="center">'+locations[j][2]+'<small>'+locations[j][3]+'</small></h3>');
                 }
             </script>
                         </tbody>
