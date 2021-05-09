@@ -192,7 +192,9 @@
                         position: new google.maps.LatLng(locations[i][0], locations[i][1]), 
                         map: map ,
                         icon : getCircle(locations[i][2], 'red'),
-                        optimized: false
+                        optimized: false,
+			clickable: false
+
                     });
                     markers[i] = marker;
 //                     addInfoWindow(markers[i], contentString);
