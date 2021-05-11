@@ -194,14 +194,14 @@
                         map: map ,
                         icon : getCircle(locations[i][2], 'red'),
                         optimized: false,
-			clickable: false
+// 			clickable: false
 
                     });
                     markers[i] = marker;
-//                     addInfoWindow(markers[i], contentString);
+                    addInfoWindow(markers[i], contentString);
                 }
-		addInfoWindow(markers[0], '<h2 dir="rtl">'+locations[0][4]+'</h2><h4 dir="rtl">التاريخ : '+locations[0][5]+'</h4>'
-                                        +'<h3 align="center">'+locations[0][2]+'<small>'+locations[0][3]+'</small></h3>');
+// 		addInfoWindow(markers[0], '<h2 dir="rtl">'+locations[0][4]+'</h2><h4 dir="rtl">التاريخ : '+locations[0][5]+'</h4>'
+//                                         +'<h3 align="center">'+locations[0][2]+'<small>'+locations[0][3]+'</small></h3>');
                 markers[0].setIcon('images/earthquake/pen_move.gif'); 
                 function getCircle(magnitude, color) {
                   var circle = {
