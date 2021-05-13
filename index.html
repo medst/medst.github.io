@@ -182,7 +182,7 @@
                 return circle;
             }
             function zoom(j) {
-                if(window.innerWidth < 768) $("html, body").animate({ scrollTop: 200 }, "slow");
+                if(window.innerWidth < 768) $("html, body").animate({ scrollTop: 150 }, "slow");
                 map.panTo(markers[j].getPosition());
                 for (var i = 0; i < locations.length; i++)
                     markers[i].setIcon(getCircle(locations[i][2], 'red'));
