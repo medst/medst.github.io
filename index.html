@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="ar-MA">
 <head>
-    <title>تابع مواقع الهزات الأرضية بالريف على rifmap</title>
-	<meta name="keywords" content="الهزات الأرضية،rifmap،rifmap.com،الزلزال،الزلازل،موقع لمتابعة زلازل الريف،زلزال الريف، الناظور، الدريوش، الحسيمة،زلزال الحسيمة،البوران،ميضار">
+    <title>rifmap</title>
+	<meta name="keywords" content="الهزات الأرضية،rif map،rifmap.com،الزلزال،الزلازل،موقع لمتابعة زلازل الريف،زلزال الريف، الناظور، الدريوش، الحسيمة،زلزال الحسيمة،البوران،ميضار">
 	<meta name="msvalidate.01" content="F43B77BE6B92D3ECD51974E0E773698B" />
-    <meta name="description" content="rifmap موقع ريفي خاص بإحصائيات الزلازل بالريف خاصة اقاليم الحسيمة والناظور والدريوش.">
+    <meta name="description" content="rif map موقع ريفي خاص بإحصائيات الزلازل بالريف خاصة اقاليم الحسيمة والناظور والدريوش.">
     <meta charset="utf-8">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
@@ -24,41 +24,6 @@
     <style type="text/css">
         body { background: #DDDADA !important; } 
     </style>
-    <script type="text/javascript">
-        function dates(n){
-            var month = new Array();
-            var m = new Array(n);
-            month[0]  = "Jan";
-            month[1]  = "Feb";
-            month[2]  = "Mar";
-            month[3]  = "Apr";
-            month[4]  = "May";
-            month[5]  = "Jun";
-            month[6]  = "Jul";
-            month[7]  = "Aug";
-            month[8]  = "Sep";
-            month[9]  = "Oct";
-            month[10] = "Nov";
-            month[11] = "Dec";
-            var d = new Date();
-            var ts = d.getTime();
-            for(var i=n; i>=0; i--){
-                var twelveDays = ts - (i * 24 * 60 * 60 * 1000);
-                m[i] = (new Date(twelveDays).getDate()+'-'+month[parseInt(new Date(twelveDays).getMonth())]);
-            }
-           return m.reverse();
-        }
-        function days(n){
-            var d = new Date();
-            var ts = d.getTime();
-            var m = new Array(n);
-            for(var i=n; i>=0; i--){
-                var twelveDays = ts - (i * 24 * 60 * 60 * 1000);
-                m[i] = parseInt(new Date(twelveDays).getDate());
-            }
-            return m.reverse();
-        }
-    </script>
 </head>
 
 <body>
@@ -139,7 +104,30 @@
                      <img src="images/earthquake/white.png" alt="rifmap" width="18px" height="18px">
 		</div>
             </div>
-        </div>	    
+        </div>	   
+	    
+	    <br/>
+
+        <div class="container row" dir="rtl">
+            <p class="lead isa_success">
+                ريف ماب (rif map) موقع خاص بمنطقة الريف. يهدف إلى تشكيل مجتمع إفتراضي ريفي في الويب.
+            </p>
+            <p class="lead isa_success">
+                هذا الموقع (rif map) مخصص لحد الأن لعرض أماكن الهزات الأرضية وتاريخ حدوثها وأيضاً شدتها على مقياس ريختر. وذلك ليأخد المجتمع الريفي كامل احتياطاته عند حدوث الزلازل.
+            </p>
+            <p class="lead isa_success">
+                يتم العمل مستقبلاً على :
+            </p>
+            <p class="lead isa_success">
+                - إضافة موسيقى وأغاني ريفية إلى الموقع 
+                <br/>
+                - إضافة خاصية نشر صور و جيف(صور متحركة) و فديويات باللغة الريفية في الموقع  و مشاركتها
+                <br/>
+                - إضافة الأخبار المحلية إلى الموقع 
+                <br/>
+                - إضافة خاصية التسوق الإلكتروني في الموقع 
+            </p>
+        </div>
        
     <footer class="footer-basic-centered">
 
