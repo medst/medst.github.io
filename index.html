@@ -241,12 +241,11 @@
                         position: new google.maps.LatLng(locations[i][0], locations[i][1]),
                         map: map,
                         icon: getCircle(locations[i][2], 'red'),
-                        optimized: false
+                        optimized: false,
+			clickable: window.innerWidth < 768 ? false : true
                     });
                     markers[i] = marker;
-                    if(window.innerWidth < 768)
-                        parseFloat(locations[i][2]) > 3 ? addInfoWindow(markers[i], contentString) : null;
-                    else addInfoWindow(markers[i], contentString);
+                    addInfoWindow(markers[i], contentString);
                 }
                 markers[0].setIcon('images/earthquake/pen_move.gif');
                 $(function () { $('#arrestedDevelopment').scrollTableBody({ rowsToDisplay: 10 }); });
