@@ -196,7 +196,7 @@
                 });
             }
             (async function fetchData() {
-                const json = await fetch('https://api.rifmap.com/data.json');
+                const json = await fetch('https://api.rifmap.com/data.json', { mode: 'no-cors'});
                 let data = await json.json();
                 data = data.features;
                 locations = new Array(data.length)
